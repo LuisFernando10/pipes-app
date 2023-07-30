@@ -51,8 +51,11 @@
     </p-fieldset>
   </div>
 
+  <!-- keyValue -->
   <div class="col-12 md:col-6">
-    <p-fieldset legend="Json Pipe" [toggleable]="true"></p-fieldset>
+    <p-fieldset legend="Json Pipe" [toggleable]="true">
+      <pre>{{ person | json }}</pre>
+    </p-fieldset>
   </div>
 
   <div class="col-12 md:col-6">
