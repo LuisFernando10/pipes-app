@@ -3,6 +3,7 @@
 </p-panel>
 
 <div class="grid">
+  <!-- i18nSelect -->
   <div class="col-12 md:col-6">
     <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
       <p>
@@ -14,8 +15,12 @@
     </p-fieldset>
   </div>
 
+  <!-- i18nPlural -->
   <div class="col-12 md:col-6">
-    <p-fieldset legend="i18nPlural Pipe" [toggleable]="true"></p-fieldset>
+    <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+      <p>Actualmente {{ clients.length | i18nPlural : clientsMap }}</p>
+      <p-button label="Atender cliente" (click)="deleteClient()"></p-button>
+    </p-fieldset>
   </div>
 
   <div class="col-12 md:col-6">
