@@ -69,9 +69,20 @@
     </p-fieldset>
   </div>
 
+  <!-- Async -->
   <div class="col-12 md:col-6">
-    <!-- TODO: El Async hace la función de ngDestroid(unsuscribe), cuando el componente se desmonta,
+    <!-- TODO: El Async hace la función de ngDestroid(unsubscribe), cuando el componente se desmonta,
     destruye las subscripciones por nosotros -->
-    <p-fieldset legend="Async Pipe" [toggleable]="true"></p-fieldset>
+    <p-fieldset legend="Async Pipe" [toggleable]="true">
+      <b>Async con Observable:</b>
+      <!-- El 'async' se subcribe a un Observable y de ahí empieza la ejecución dle mismo -->
+      <pre *ngIf="!(myObservableTimer | async)">Resolviendo observable...</pre>
+      <pre>{{ myObservableTimer | async }}</pre>
+      <hr />
+
+      <b>Async con Promesa:</b>
+      <pre *ngIf="!(promiseValue | async)">Resolviendo promesa...</pre>
+      <pre>{{ promiseValue | async }}</pre>
+    </p-fieldset>
   </div>
 </div>

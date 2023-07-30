@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable, interval, tap } from 'rxjs';
 
 @Component({
   selector: 'app-uncommon-page',
@@ -30,4 +31,17 @@ export class UncommonPageComponent {
 
   // keyValue
   public person = { name: 'Fernando', age: 27, address: 'Aracajú, BR' };
+
+  // Async
+  public myObservableTimer: Observable<number> = interval(2000).pipe(
+    // 'interval()' crea un observable de tipo numérico incrementable (0,1,2,3,...) cada cierto periodo de tiempo
+    tap((val) => console.log(val))
+  );
+
+  // NOTA: Al usar el 'Async pipe' en una promesa, la promesa NO se puede cancelar (esta es la diferencia de un Observable)
+  public promiseValue: Promise<string> = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Tenemos Data en la promesa.');
+    }, 3500);
+  });
 }
