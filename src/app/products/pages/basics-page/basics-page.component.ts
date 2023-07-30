@@ -9,4 +9,5 @@ export class BasicsPageComponent {
   public lowercase = 'fernando';
   public uppercase = 'FERNANDO';
   public titlecase = 'FerNaNDo cHAMorRo';
+  public customDate: Date = new Date();
 }
