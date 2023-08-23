@@ -8,16 +8,19 @@ import { BasicsPageComponent } from './pages/basics-page/basics-page.component';
 import { NumbersPageComponent } from './pages/numbers-page/numbers-page.component';
 import { OrdersPageComponent } from './pages/orders-page/orders-page.component';
 import { UncommonPageComponent } from './pages/uncommon-page/uncommon-page.component';
-import { GetTextFlyColumnPipe, ToggleCasePipe } from './pipes';
+import { GetTextFlyColumnPipe, ToggleCasePipe, SortByPipe } from './pipes';
 
 @NgModule({
   declarations: [
     BasicsPageComponent,
-    GetTextFlyColumnPipe,
     NumbersPageComponent,
     OrdersPageComponent,
-    ToggleCasePipe,
     UncommonPageComponent,
+
+    // Pipes
+    GetTextFlyColumnPipe,
+    SortByPipe,
+    ToggleCasePipe,
   ],
   imports: [CommonModule, PrimeNgModule, ProductsRoutingModule],
 })
