@@ -8,11 +8,12 @@ import { BasicsPageComponent } from './pages/basics-page/basics-page.component';
 import { NumbersPageComponent } from './pages/numbers-page/numbers-page.component';
 import { OrdersPageComponent } from './pages/orders-page/orders-page.component';
 import { UncommonPageComponent } from './pages/uncommon-page/uncommon-page.component';
-import { ToggleCasePipe } from './pipes/toggle-case.pipe';
+import { GetTextFlyColumnPipe, ToggleCasePipe } from './pipes';
 
 @NgModule({
   declarations: [
     BasicsPageComponent,
+    GetTextFlyColumnPipe,
     NumbersPageComponent,
     OrdersPageComponent,
     ToggleCasePipe,

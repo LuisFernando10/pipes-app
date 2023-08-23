@@ -53,7 +53,7 @@
         <ng-template pTemplate="body" let-heroes>
           <tr>
             <td>{{ heroes.name }}</td>
-            <td>{{ heroes.canFly }}</td>
+            <td>{{ heroes.canFly | getTextFlyColumn }}</td>
             <td>{{ heroes.color }}</td>
           </tr>
         </ng-template>
